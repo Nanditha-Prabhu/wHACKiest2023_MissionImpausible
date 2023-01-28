@@ -19,7 +19,7 @@ if(isset($_POST['submit'])) {
     $password = $_POST['password'];
     $usertype = $_POST['usertype'];
 
-    $sql = "INSERT INTO USER_SIGNUP (USERNAME, EMAILID, PASSWORD, USER_TYPE) VALUES ('$name', '$email', '$password')";
+    $sql = "INSERT INTO USER_SIGNUP (USERNAME, EMAILID, PASSWORD, USER_TYPE) VALUES ('$name', '$email', '$password', '$usertype')";
 
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
