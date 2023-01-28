@@ -30,9 +30,9 @@
             background-color: rgb(17, 124, 143);
         }
 
-        a:hover {
-            color: green;
-            background-color: white;
+        .button:hover {
+            color: rgb(0, 0, 0);
+            background-color: whitesmoke;
         }
 
         /* input[type='email'] {
@@ -45,35 +45,37 @@
 <body font=3cm>
     <h1>SIGN UP FORM</h1>
     <p>
+        <form action="http://localhost/connect.php" method="post">
     <table align="center">
         <tr style="background-color :lightblue;">
             <th colspan="2">NEW USER? PLEASE SIGN UP BEFORE YOU LOG IN!!</th>
         </tr>
         <tr style="background-color:burlywood">
             <th>USERNAME: </th>
-            <th><input type="text" placeholder="Complete name"></label></th>
+            <td><input type="text" name="username" placeholder="Complete name"></label></td>
         </tr>
         <tr style="background-color:burlywood">
             <th>EMAIL ID:</th>
-            <th><input type="email"></th>
+            <td><input name="emailid" type="email"></td>
         </tr>
         <tr style="background-color:burlywood">
             <th>PASSWORD:</th>
-            <th><input type="password" placeholder="min 8 characters"></th>
+            <td><input name="password" type="password" placeholder="min 8 characters"></td>
         </tr>
         <tr style="background-color:burlywood">
-            <th>USER TYPE</th>
-            <th align="left">
-                <input type="radio" id="user" value="user"><label for="">User</label><br>
-                <input type="radio" id="user's parent" value="user's parent"><label for="">User's Parent</label><br>
-                <input type="radio" id="user's local guardian" value="user's local guardian"><label for="">User's local guardian</label><br>
-                <input type="radio" id="nearby official" value="nearby official"><label for="">Nearby official</label><br>
-            </th>
+            <th>USER TYPE: </th>
+            <td align="left">
+                <input type="radio" id="user" name="user type" value="user"><label for="">User</label><br>
+                <input type="radio" id="user's parent" name="user type" value="user's parent"><label for="">User's Parent</label><br>
+                <input type="radio" id="user's local guardian" name="user type" value="user's local guardian"><label for="">User's local guardian</label><br>
+                <input type="radio" id="nearby official" name="user type" value="nearby official"><label for="">Nearby official</label><br>
+            </td>
         </tr>
     </table>
+</form>
     </p>
     <p align="center">
-        <button class="button button" type="submit">SUBMIT</button>
+        <button class="button button" name="submit" type="submit">SUBMIT</button>
     </p>
     <!-- <button style="color:blue;">click</button>
         <a href="">read more</a> -->
